@@ -2,7 +2,7 @@
  * @param {number[][]} graph
  * @return {number[]}
  */
-var eventualSafeNodes = function(graph) {
+const eventualSafeNodes = function(graph) {
   const n = graph.length;
   const outdegree = new Array(n).fill(0);
   const neighbors = new Array(n).fill(null).map(() => []);
