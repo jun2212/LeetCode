@@ -8,7 +8,6 @@ var eventualSafeNodes = function(graph) {
   const neighbors = new Array(n).fill(null).map(() => []);
   const safeNodes = [];
 
-  // Step 1: Build the inverse graph
   for (let i = 0; i < n; i++) {
     for (const neighbor of graph[i]) {
       outdegree[i]++;
@@ -16,7 +15,6 @@ var eventualSafeNodes = function(graph) {
     }
   }
 
-  // Step 2: Perform topological sorting
   const queue = [];
   for (let i = 0; i < n; i++) {
     if (outdegree[i] === 0) {
